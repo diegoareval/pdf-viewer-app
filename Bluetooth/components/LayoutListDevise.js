@@ -16,13 +16,13 @@ const LayoutListDevise = ({children, title}) => {
 const styles = StyleSheet.create({
   title:{
     fontSize: 20,
-    fontWeight: 'bold'
-
+    fontWeight: 'bold',
+   marginLeft: 10
   },
   container:{
     paddingHorizontal: 20,
     paddingVertical: 25,
-    backgroundColor: '#F5FCFF'
+    backgroundColor: "white"
   }
 });
 

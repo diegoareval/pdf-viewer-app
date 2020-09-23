@@ -30,7 +30,7 @@ const styles = StyleSheet.create({
     flexDirection: "row"
   },
   switch:{
-    width: 50
+    width: 50,
   }
 });
 

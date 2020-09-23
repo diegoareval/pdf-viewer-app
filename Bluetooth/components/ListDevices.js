@@ -15,7 +15,7 @@ const [data, setLista] = useState([]);
 const [enable, setEnable] = useState(true)
 
 useEffect(() => {
- async function init(){
+ const init = async () => {
   const enabled = await BluetoothSerial.requestEnable();
   const list = await BluetoothSerial.list()
   setEnable(enabled);
@@ -23,7 +23,7 @@ useEffect(() => {
  }
  init()
  return() =>{
-   async function remove(){
+   const remove = async () => {
      await BluetoothSerial.stopScanning();
      console.log("termino de scannear");
    }

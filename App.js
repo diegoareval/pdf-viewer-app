@@ -1,9 +1,12 @@
 import React from 'react';
 import {View} from 'react-native';
-import ListDevise from './Bluetooth/components/ListDevices'
-
+import Lantern from './Lantern/Lantern'
 const App= () => {
-  return <View><ListDevise/></View>;
+  return (
+    <View>
+      <Lantern />
+    </View>
+  );
 };
 
 

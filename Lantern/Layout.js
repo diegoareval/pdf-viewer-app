@@ -1,8 +1,7 @@
 import React from 'react';
 import {StyleSheet, View, Text} from 'react-native';
 
-const LayoutListDevise = ({children, title}) => {
-  
+const Layout = ({children, title}) => {
   return (
     <>
       <View style={styles.container}>
@@ -14,16 +13,17 @@ const LayoutListDevise = ({children, title}) => {
 };
 
 const styles = StyleSheet.create({
-  title:{
+  title: {
     fontSize: 20,
     fontWeight: 'bold',
-   marginLeft: 10
+    marginLeft: 10,
+    textAlign: "center"
   },
-  container:{
+  container: {
     paddingHorizontal: 20,
     paddingVertical: 25,
-    backgroundColor: "white"
-  }
+    backgroundColor: 'white',
+  },
 });
 
-export default LayoutListDevise;
+export default Layout;

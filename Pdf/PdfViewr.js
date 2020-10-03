@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import {Dimensions,View} from 'react-native';
-import {configOrientation, prev, next, zoomI, zoomO} from './helper/helper';
+import {configOrientation, prev, next, zoomI, zoomO} from './helper';
 import Pdf from 'react-native-pdf';
 import Orientation from 'react-native-orientation-locker';
 import {source} from './consts/urls'

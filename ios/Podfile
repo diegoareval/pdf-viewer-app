@@ -10,6 +10,10 @@ target 'BlueApp' do
 
   pod 'RNWifi', :path => '../node_modules/react-native-wifi-reborn'
 
+
+
+
+
   target 'BlueAppTests' do
     inherit! :complete
     # Pods for testing

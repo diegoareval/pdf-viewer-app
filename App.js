@@ -1,10 +1,10 @@
 import React from 'react';
 import {View} from 'react-native';
-import Lantern from './Lantern'
+import PDF from './Pdf/PdfViewr'
 const App= () => {
   return (
     <View>
-      <Lantern />
+      <PDF />
     </View>
   );
 };

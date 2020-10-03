@@ -7,7 +7,7 @@ import {
     View,
     Text
 } from 'react-native';
-
+import {configOrientation} from './helper/helper'
 import Pdf from 'react-native-pdf';
 import Orientation from 'react-native-orientation-locker';
 import {source} from './consts/urls'
@@ -26,14 +26,9 @@ const PDF =() => {
 
 
     const onOrientationDidChange = (orientation) => {
-        if (orientation == 'LANDSCAPE-LEFT'||orientation == 'LANDSCAPE-RIGHT') {
-          setWidth(WIN_HEIGHT>WIN_WIDTH?WIN_HEIGHT:WIN_WIDTH)
-          setHorizontal(true)
-
-        } else {
-            setWidth(WIN_HEIGHT>WIN_WIDTH?WIN_HEIGHT:WIN_WIDTH)
-          setHorizontal(false)
-        }
+      const {horizonta, widt} = configOrientation(orientation, WIN_HEIGHT, WIN_WIDTH);
+            setWidth(widt);
+          setHorizontal(horizonta);
     };
     
 
@@ -43,8 +38,6 @@ const PDF =() => {
                 Orientation.removeOrientationListener(onOrientationDidChange);
       };
     }, [])
-
-
 
    const  prePage = () => {
         let prePage = page > 1 ? page - 1 : 1;
